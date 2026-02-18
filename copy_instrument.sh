@@ -1,0 +1,2 @@
+echo "perl create_instrument_folder.pl --src '/Users/ralf/Dropbox/BBB-Noten/01_Titel-Sorted' --dst ./instruments/$1 --instrument $1 --verbose"
+perl create_instrument_folder.pl --src '/Users/ralf/Dropbox/BBB-Noten/01_Titel-Sorted' --dst ../instruments/$1 --instrument $1 --verbose
