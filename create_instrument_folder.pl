@@ -57,7 +57,7 @@ if ( -e $src_folder ) {
 
 
 foreach my $folder (sort @folders) {
-	if ($folder =~ /^(\.|#|ZZZ)/) {
+	if ($folder =~ /^(\.|#|ZZZ)|00_|10_|2026/) {
 		print "Skipping special folder $folder\n";
 		next;
 	}; 

@@ -31,6 +31,7 @@ E.g.
 
 *  Stimmenbezeichnungen
    - CONDUCTOR
+   - FULL-SCORE
    - VOCAL
    - RHYTH-BASS
    - RHYTH-DRUMS
