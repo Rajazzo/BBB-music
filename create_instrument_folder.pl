@@ -23,11 +23,11 @@ use Data::Dumper; #Debug
 # turn all warnings to fatal errors
 local $SIG{__WARN__} = sub { die $_[0] };
  
-my $src_folder;  
-my $dst_folder; 	 
-my $instrument;
+my $instrument = "TBN1";
+my $src_folder = "/Users/ralf/Dropbox/BBB-Noten/01_Titel-Sorted";  
+my $dst_folder = "../instruments/$instrument";  	 
 my $verbose = 0;
-my $sim = 0;
+my $sim = 1;
 my $help = 0;
 my $usage_string = "Usage: perl $0 --src './music_sheets' --dst './instr_folder' --instrument 'TBN3'";
 
@@ -146,8 +146,7 @@ foreach $instrument (@to_scan)
 			}
 			else {
 				foreach my $file (@matches) { #should acutally be only one :-)
-					if (!$file) {
-					} else {
+					if ($file) {
 						$all_titles{$title}{$instrument} = "+";	
 						if (-e "$dst_folder/$instrument/$file") {
 							print "INFO: $dst_folder/$instrument/$file already exists in destination\n" if $verbose;
