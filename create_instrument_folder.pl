@@ -27,7 +27,7 @@ my $instrument = "TBN1";
 my $src_folder = "/Users/ralf/Dropbox/BBB-Noten/01_Titel-Sorted";  
 my $dst_folder = "../instruments/$instrument";  	 
 my $verbose = 0;
-my $sim = 1;
+my $sim = 0;
 my $help = 0;
 my $usage_string = "Usage: perl $0 --src './music_sheets' --dst './instr_folder' --instrument 'TBN3'";
 
@@ -114,7 +114,7 @@ foreach $instrument (@to_scan) {
 
 foreach $instrument (@to_scan)
 {
-	print "INFO: Searching for instrument '$instrument'\n";
+	print "\nINFO: Searching for instrument '$instrument'\n";
 	if ( -d "$dst_folder/$instrument" ) {
 		print "WARNING: $dst_folder/$instrument exists, files will be overwritten!\n" if $verbose;
 	} else {
